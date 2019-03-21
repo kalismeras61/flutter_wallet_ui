@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_wallet_ui_challenge/src/data/data.dart';
+import 'package:flutter_wallet_ui_challenge/src/pages/overview_page.dart';
 import 'package:flutter_wallet_ui_challenge/src/utils/screen_size.dart';
 import 'package:flutter_wallet_ui_challenge/src/widgets/add_button.dart';
 import 'package:flutter_wallet_ui_challenge/src/widgets/credit_card.dart';
@@ -32,7 +33,7 @@ class HomePage extends StatelessWidget {
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                   image: AssetImage("assets/images/bg1.jpg"),
-                                  fit: BoxFit.fitHeight,
+                                  fit: BoxFit.cover,
                                 ),
                               ),
                             ),
@@ -76,8 +77,14 @@ class HomePage extends StatelessWidget {
                         itemBuilder: (context, index) {
                           return Padding(
                             padding: EdgeInsets.only(right: 10),
-                            child: CreditCard(
-                              card: getCreditCards()[index],
+                            child: GestureDetector(
+                              onTap: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => OverviewPage())),
+                              child: CreditCard(
+                                card: getCreditCards()[index],
+                              ),
                             ),
                           );
                         },

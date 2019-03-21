@@ -35,7 +35,7 @@ class AddButton extends StatelessWidget {
             iconSize: 40.0,
           ),
           Text(
-            "Add Money",
+            "Add Person",
             style: TextStyle(
                 inherit: true,
                 fontWeight: FontWeight.bold,

@@ -10,10 +10,11 @@ class CreditCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final _media = MediaQuery.of(context).size;
     return Material(
-      elevation: 0,
+      elevation: 1,
+      shadowColor: Colors.grey.shade300,
       color: Colors.white,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(15),
       ),
       child: Stack(
         children: <Widget>[
