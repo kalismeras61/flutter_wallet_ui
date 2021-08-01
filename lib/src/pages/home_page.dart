@@ -162,59 +162,11 @@ class HomePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(
-                      left: 25.0, right: 10, bottom: 20, top: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text(
-                        "Send Money",
-                        style: TextStyle(
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Icon(
-                        Icons.arrow_forward_ios,
-                        color: Colors.grey,
-                        size: 20,
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 25),
-                  height: screenAwareSize(
-                      _media.longestSide <= 775 ? 110 : 80, context),
-                  child: NotificationListener<OverscrollIndicatorNotification>(
-                    onNotification: (overscroll) {
-                      overscroll.disallowGlow();
-                    },
-                    child: ListView.builder(
-                      physics: BouncingScrollPhysics(),
-                      scrollDirection: Axis.horizontal,
-                      itemCount: getUsersCard().length + 1,
-                      itemBuilder: (BuildContext context, int index) {
-                        if (index == 0) {
-                          return Padding(
-                              padding: EdgeInsets.only(right: 10),
-                              child: AddButton());
-                        }
 
-                        return Padding(
-                          padding: EdgeInsets.only(right: 20),
-                          child: UserCardWidget(
-                            user: getUsersCard()[index - 1],
-                          ),
-                        );
-                      },
-                    ),
-                  ),
-                ),
+
                 Padding(
                   padding: const EdgeInsets.only(
-                      left: 25.0, bottom: 15, right: 10, top: 40),
+                      left: 25.0, bottom: 15, right: 10, top: 25),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[

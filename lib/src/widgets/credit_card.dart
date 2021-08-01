@@ -25,7 +25,7 @@ class CreditCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  "Card no.",
+                  "Name.",
                   style: TextStyle(
                     color: Colors.grey,
                     fontSize: 15,
@@ -47,7 +47,7 @@ class CreditCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      "Expires",
+                      "Savings",
                       style: TextStyle(
                         fontSize: 18,
                         color: Colors.grey.shade400,

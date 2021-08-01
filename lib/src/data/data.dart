@@ -6,9 +6,9 @@ import 'package:flutter_wallet_ui_challenge/src/models/user_model.dart';
 List<CreditCardModel> getCreditCards() {
   List<CreditCardModel> creditCards = [];
   creditCards.add(CreditCardModel(
-      "4616900007729988",
+      "Adam",
       "https://resources.mynewsdesk.com/image/upload/ojf8ed4taaxccncp6pcp.png",
-      "06/23",
+      "32,763",
       "192"));
   creditCards.add(CreditCardModel(
       "3015788947523652",
