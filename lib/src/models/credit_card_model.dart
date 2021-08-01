@@ -4,27 +4,12 @@ class CreditCardModel{
       this._logo,
       this._expiryDate,
       this._cvv):
-      assert(_cardNo.length==16);
+      assert(_cardNo.length>1);
 
   String get cardNo
   {
-    var letters=[];
-    for(int i=0;i<_cardNo.length;)
-      {
-                 letters.add(_cardNo.substring(i,( ( i ~/4)+1)*4));
-         i+=4;
-      }
-    var fakeCardNo="";
-    for(int i=0;i<letters.length;i++)
-      {
-        if(i==letters.length-1)
-          {
-            fakeCardNo+=letters[i];
-            break;
-          }
-     fakeCardNo+="****    ";
-      }
-    return fakeCardNo;
+
+    return _cardNo;
   }
 
 

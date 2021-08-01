@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_wallet_ui_challenge/src/pages/home_page.dart';
 
+import 'widgets/add_button.dart';
+
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -9,7 +11,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
         fontFamily: "Varela",
       ),
-      home: HomePage(),
+      home: AddButton(),
     );
   }
 }
